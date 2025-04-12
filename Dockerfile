@@ -24,8 +24,7 @@ RUN pip install --no-cache-dir \
 
 # Clone ComfyUI-Manager
 RUN comfy --skip-prompt --workspace /comfy/ComfyUI install --nvidia
-COPY WAN-2.1-720p-Image-to-Video-Teacache-Sage-Attention.json /comfy/ComfyUI/WAN-2.1-720p-Image-to-Video-Teacache-Sage-Attention.json
-RUN comfy node install-deps --workflow=/comfy/ComfyUI/WAN-2.1-720p-Image-to-Video-Teacache-Sage-Attention.json
+
 
 # Set the entry point for the container
 CMD comfy launch -- --listen 0.0.0.0 --port ${PORT:-8188}
