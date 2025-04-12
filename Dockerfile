@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     wget
 
 # Update pip, install GPU dependencies, and install Comfy dependencies
-RUN pip install --upgrade pip && pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir \
     opencv-python-headless==4.8.1.78 \
